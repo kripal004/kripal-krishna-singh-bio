@@ -8,7 +8,9 @@ import Experience from "./Experience";
 import Contributions from "./Contributions";
 import Blog from "./Blog";
 import Projects from "./Projects";
+import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function Portfolio() {
   return (
@@ -20,7 +22,9 @@ export default function Portfolio() {
       <Contributions />
       <Blog />
       <Projects />
+      <Testimonials />
       <Contact />
+      <Footer />
     </div>
   );
 }

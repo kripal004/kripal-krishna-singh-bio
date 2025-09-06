@@ -14,6 +14,9 @@ export default function Navbar() {
           <a href="#blog" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Blog
           </a>
+          <a href="#testimonials" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
+            Testimonials
+          </a>
           <a href="#contact" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Contact
           </a>
