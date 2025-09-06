@@ -1,7 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Job = ({ title, company, duration, location, points }) => (
-  <div className="mb-6">
+const jobVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const Job = ({ title, company, duration, location, points, index }) => (
+  <motion.div className="mb-6" custom={index} variants={jobVariants}>
     <b>{company}</b> | {title}
     <br />
     <span className="text-gray-500 text-sm">{duration} | {location}</span>
@@ -10,7 +24,7 @@ const Job = ({ title, company, duration, location, points }) => (
         <li key={index}>{point}</li>
       ))}
     </ul>
-  </div>
+  </motion.div>
 );
 
 export default function Experience() {
@@ -54,7 +68,12 @@ export default function Experience() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-8">
+    <motion.section
+      className="max-w-5xl mx-auto px-6 py-8"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <h3 className="text-xl font-semibold mb-4">Experience</h3>
       {experiences.map((job, index) => (
         <Job
@@ -64,8 +83,9 @@ export default function Experience() {
           duration={job.duration}
           location={job.location}
           points={job.points}
+          index={index}
         />
       ))}
-    </section>
+    </motion.section>
   );
 }

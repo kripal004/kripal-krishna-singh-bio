@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
@@ -11,7 +12,13 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="max-w-5xl mx-auto px-6 py-16">
+        <motion.section
+            id="contact"
+            className="max-w-5xl mx-auto px-6 py-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}>
             <h2 className="text-2xl font-semibold mb-6">Contact</h2>
             <div className="text-gray-700">
                 <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
@@ -29,6 +36,6 @@ export default function Contact() {
                     <p>LinkedIn: <a href="https://linkedin.com/in/kripal-singh-a9989512a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a></p>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

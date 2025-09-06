@@ -1,10 +1,15 @@
 import React from "react";
 import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="text-4xl md:text-5xl font-bold mb-2">Hi, I am Kripal Krishna Singh</h1>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">Senior Associate Consultant – Front-End Developer</h2>
         <div className="mb-4 text-gray-700">
@@ -33,10 +38,15 @@ export default function Hero() {
         <Button component="a" href="/kripal-krishna-singh/assets/260725.pdf" target="_blank" download>
           Download Resume
         </Button>
-      </div>
-      <div className="flex justify-center md:justify-end">
+      </motion.div>
+      <motion.div
+        className="flex justify-center md:justify-end"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="w-48 h-48 rounded-full object-cover shadow-lg" />
-      </div>
+      </motion.div>
     </section>
   );
 }
