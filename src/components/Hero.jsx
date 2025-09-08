@@ -45,7 +45,7 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="w-48 h-48 rounded-full object-cover shadow-lg" />
+        <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="w-[23rem] h-[23rem] rounded-full object-cover shadow-lg" />
       </motion.div>
     </section>
   );
