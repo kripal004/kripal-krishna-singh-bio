@@ -14,8 +14,21 @@ export default function SkillsEducation() {
     }),
   };
 
+  const skills = {
+    "Languages": ["JavaScript", "TypeScript"],
+    "Front-End": ["React.js", "Next.js", "Redux", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Material-UI"],
+    "State Management": ["Redux Toolkit", "Redux Saga", "Zustand", "React Context API"],
+    "UI/UX": ["Figma", "Adobe XD", "Canva"],
+    "Testing": ["Jest", "React Testing Library", "Cypress", "Vitest"],
+    "Version Control": ["Git", "GitHub", "Bitbucket", "Jira", "VersionOne", "ServiceNow"],
+    "Cloud & DevOps": ["AWS (S3, CloudFront)", "Docker", "Jenkins", "Vercel"],
+    "Tools": ["VS Code", "Chrome DevTools", "Postman", "Webpack", "Vite"],
+    "Databases (Basic)": ["MongoDB", "MySQL", "Firebase"]
+  };
+
   return (
-    <section className="max-w-5xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-10">
+    <section id="skills" className="bg-gray-50 py-16 px-6">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
       <motion.div
         custom={0}
         initial="hidden"
@@ -23,18 +36,21 @@ export default function SkillsEducation() {
         viewport={{ once: true, amount: 0.5 }}
         variants={listVariants}
       >
-        <h3 className="text-xl font-semibold mb-2">Skills</h3>
-        <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-          <li><b>Languages:</b> JavaScript, TypeScript</li>
-          <li><b>Front-End:</b> React.js, Next.js, Redux, HTML5, CSS3, SCSS, Tailwind CSS, Material-UI</li>
-          <li><b>State Management:</b> Redux Toolkit, Redux Saga, Zustand, React Context API</li>
-          <li><b>UI/UX:</b> Figma, Adobe XD, Canva</li>
-          <li><b>Testing:</b> Jest, React Testing Library, Cypress, Vitest</li>
-          <li><b>Version Control:</b> Git, GitHub, Bitbucket, Jira, VersionOne, ServiceNow</li>
-          <li><b>Cloud & DevOps:</b> AWS (S3, CloudFront), Docker, Jenkins, Vercel</li>
-          <li><b>Tools:</b> VS Code, Chrome DevTools, Postman, Webpack, Vite</li>
-          <li><b>Databases (Basic):</b> MongoDB, MySQL, Firebase</li>
-        </ul>
+        <h3 className="text-2xl font-bold mb-6 text-gray-800">Skills</h3>
+        <div className="space-y-4">
+          {Object.entries(skills).map(([category, skillList]) => (
+            <div key={category}>
+              <h4 className="font-semibold text-gray-700 mb-2">{category}</h4>
+              <div className="flex flex-wrap gap-2">
+                {skillList.map(skill => (
+                  <span key={skill} className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </motion.div>
       <motion.div
         custom={1}
@@ -43,23 +59,34 @@ export default function SkillsEducation() {
         viewport={{ once: true, amount: 0.5 }}
         variants={listVariants}
       >
-        <h3 className="text-xl font-semibold mb-2">Education</h3>
-        <div className="text-gray-700 text-sm mb-4">
-          <b>Yeshwantrao Chavan College of Engineering</b><br />
-          B.E. (Computer Technology), May 2020<br />
-          Nagpur, IN
+        <h3 className="text-2xl font-bold mb-6 text-gray-800">Education</h3>
+        <div className="space-y-6">
+          <div className="p-4 border-l-4 border-blue-500 bg-white rounded-r-lg shadow-sm">
+            <p className="font-bold text-gray-900">Yeshwantrao Chavan College of Engineering</p>
+            <p className="text-gray-600 text-sm">B.E. (Computer Technology), May 2020</p>
+            <p className="text-gray-500 text-xs mt-1">Nagpur, IN</p>
+          </div>
+          <div className="p-4 border-l-4 border-blue-500 bg-white rounded-r-lg shadow-sm">
+            <p className="font-bold text-gray-900">Senior Secondary (12th Grade)</p>
+            <p className="text-gray-600 text-sm">NIOS</p>
+            <p className="text-gray-500 text-xs mt-1">Ranchi, IN</p>
+          </div>
+          <div className="p-4 border-l-4 border-blue-500 bg-white rounded-r-lg shadow-sm">
+            <p className="font-bold text-gray-900">Secondary (10th Grade)</p>
+            <p className="text-gray-600 text-sm">CBSE</p>
+            <p className="text-gray-500 text-xs mt-1">Ranchi, IN</p>
+          </div>
         </div>
-        <div className="text-gray-700 text-sm">
-          <b>Senior Secondary (12th Grade)</b><br />
-          NIOS<br />
-          Ranchi, IN
-        </div>
-        <div className="text-gray-700 text-sm mt-2">
-          <b>Secondary (10th Grade)</b><br />
-          CBSE<br />
-          Ranchi, IN
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold mb-6 text-gray-800">Courses & Certifications</h3>
+          <div className="space-y-2">
+            <p className="text-gray-700 text-sm">React – The Complete Guide (incl. Hooks, React Router, Redux)</p>
+            <p className="text-gray-700 text-sm">Vue.js Fast Crash Course</p>
+            <p className="text-gray-700 text-sm">The Complete 2024 Web Development Bootcamp</p>
+          </div>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 }

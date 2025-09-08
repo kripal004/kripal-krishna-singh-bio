@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { experiences } from "./experienceData";
 
 const jobVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -15,77 +16,46 @@ const jobVariants = {
 };
 
 const Job = ({ title, company, duration, location, points, index }) => (
-  <motion.div className="mb-6" custom={index} variants={jobVariants}>
-    <b>{company}</b> | {title}
-    <br />
-    <span className="text-gray-500 text-sm">{duration} | {location}</span>
-    <ul className="list-disc list-inside text-gray-700 text-sm mt-1 space-y-1">
+  <motion.div className="relative pl-12 pb-12" custom={index} variants={jobVariants}>
+    {/* Timeline Marker */}
+    <div className="absolute left-0 top-1 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-800"></div>
+
+    <p className="text-sm font-medium text-gray-500 mb-1">{duration} | {location}</p>
+    <h4 className="text-lg font-bold text-gray-900">{title}</h4>
+    <p className="font-semibold text-blue-700 mb-3">{company}</p>
+    <ul className="list-disc list-inside text-gray-700 text-sm space-y-2">
       {points.map((point, index) => (
-        <li key={index}>{point}</li>
+        <li key={index} className="pl-2">{point}</li>
       ))}
     </ul>
   </motion.div>
 );
 
 export default function Experience() {
-  const experiences = [
-    {
-      title: "Senior Associate Consultant – Front-End Developer",
-      company: "Infosys Ltd.",
-      duration: "May 2024 – Present",
-      location: "Bangalore, IN",
-      points: [
-        "Architected and deployed a scalable frontend system for a high-profile aerospace client, leveraging React.js, Next.js, and TypeScript to handle complex data visualizations and workflows.",
-        "Boosted application load performance by 40% by implementing Server-Side Rendering (SSR), code-splitting with dynamic imports, and integrating next-gen image formats, significantly enhancing user experience.",
-        "Drove a 60% reduction in code duplication across the organization by designing, developing, and leading the adoption of a reusable UI component library shared across more than five different modules.",
-        "Elevated team productivity by mentoring three junior developers and instituting a robust code review process that enforced best practices and maintained high code quality standards.",
-        "Streamlined development cycles and ensured on-time feature delivery by integrating seamlessly with Agile/Scrum methodologies, managing workflows in Jira and ServiceNow, and consistently delivering a high volume of production-ready features.",
-      ],
-    },
-    {
-      title: "React.js Developer",
-      company: "Aventior Digital Pvt. Ltd.",
-      duration: "Dec 2020 – Apr 2024",
-      location: "Pune, IN",
-      points: [
-        "Spearheaded the development and maintenance of key SPA features using React.js, integrating with complex REST APIs to deliver a responsive and data-rich user experience within an Agile framework.",
-        "Managed end-to-end delivery of four major version releases, independently handling full feature modules from concept to deployment, ensuring a high level of quality and stability.",
-        "Improved code maintainability and scalability by refactoring legacy components, introducing modern React patterns like custom hooks and the Context API.",
-        "Optimized application performance through strategic implementation of techniques like lazy loading, memoization, and route-based rendering.",
-      ],
-    },
-    {
-      title: "Web Designer Intern",
-      company: "Take IT Ideas Innovative Solutions",
-      duration: "Jan 2020 – July 2020",
-      location: "Nagpur, IN",
-      points: [
-        "Assisted in frontend development and UI design, gaining hands-on experience with core technologies including HTML, CSS, and JavaScript.",
-        "Enhanced UI consistency across internal dashboards by customizing existing layouts and adhering to design guidelines.",
-        "Developed a foundational understanding of the complete frontend development lifecycle and applied principles of responsive design.",
-      ],
-    },
-  ];
-
   return (
     <motion.section
-      className="max-w-5xl mx-auto px-6 py-8"
+      id="experience"
+      className="max-w-5xl mx-auto px-6 py-16 bg-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <h3 className="text-xl font-semibold mb-4">Experience</h3>
-      {experiences.map((job, index) => (
-        <Job
-          key={index}
-          title={job.title}
-          company={job.company}
-          duration={job.duration}
-          location={job.location}
-          points={job.points}
-          index={index}
-        />
-      ))}
+      <h3 className="text-2xl font-bold mb-8 text-gray-800">Work Experience</h3>
+      <div className="relative">
+        {/* This div creates the main timeline line that all jobs will connect to */}
+        <div className="absolute left-[7px] top-1 h-full w-0.5 bg-gray-200 -z-10"></div>
+        {experiences.map((job, index) => (
+          <Job
+            key={index}
+            title={job.title}
+            company={job.company}
+            duration={job.duration}
+            location={job.location}
+            points={job.points}
+            index={index}
+          />
+        ))}
+      </div>
     </motion.section>
   );
 }

@@ -14,8 +14,11 @@ export default function Navbar() {
           <a href="#work" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Work
           </a>
-          <a href="#blog" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
-            Blog
+          <a href="#experience" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
+            Experience
+          </a>
+          <a href="#skills" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
+            Skills
           </a>
           <a href="#testimonials" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Testimonials
@@ -44,8 +47,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 space-y-2">
-          <a href="#work" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Work</a>
-          <a href="#blog" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Blog</a>
+          <a href="#work" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Work</a>          
+          <a href="#experience" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Experience</a>
+          <a href="#skills" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Skills</a>
           <a href="#testimonials" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Testimonials</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Contact</a>
         </div>

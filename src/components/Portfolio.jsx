@@ -6,8 +6,8 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import SkillsEducation from "./SkillsEducation";
 import Experience from "./Experience";
-import Contributions from "./Contributions";
 import Blog from "./Blog";
+import KeyAchievements from "./KeyAchievements";
 import Projects from "./Projects";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
@@ -20,12 +20,12 @@ export default function Portfolio() {
       <AnimatePresence>
         <Navbar />
         <Hero />
-        <SkillsEducation />
-        <Experience />
-        <Contributions />
-        <Blog />
         <Projects />
+        <Experience />
+        <KeyAchievements />
         <Testimonials />
+        <SkillsEducation />
+        <Blog />
         <Contact />
         <Footer />
         <BackToTop />
