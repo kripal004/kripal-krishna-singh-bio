@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-gray-900">
-          Kripal Singh
+        <a href="#">
+          <img src="../../assets/Bio.jpg" alt="Profile" className="h-10 w-10 rounded-full object-cover" />
         </a>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
@@ -16,6 +16,9 @@ export default function Navbar() {
           </a>
           <a href="#experience" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Experience
+          </a>
+          <a href="#achievements" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
+            Achievements
           </a>
           <a href="#skills" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Skills
@@ -49,6 +52,7 @@ export default function Navbar() {
         <div className="md:hidden px-6 pb-4 space-y-2">
           <a href="#work" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Work</a>          
           <a href="#experience" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Experience</a>
+          <a href="#achievements" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Achievements</a>
           <a href="#skills" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Skills</a>
           <a href="#testimonials" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Testimonials</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-blue-500 font-semibold">Contact</a>

@@ -24,9 +24,11 @@ export default function KeyAchievements() {
         >
           <h3 className="text-2xl font-bold mb-6 text-gray-800 text-center">Key Achievements</h3>
           <ul className="list-disc list-inside text-gray-700 text-sm space-y-2 md:w-3/4 mx-auto">
-            <li>Spearheaded refactoring initiative to modularize codebase and reduce bundle size by 25%.</li>
-            <li>Promoted consistent UI through design system contributions across 3 teams.</li>
-            <li>Championed use of React Testing Library and Jest for improved test coverage in major releases.</li>
+            <li>Architected and deployed a scalable frontend system for a high-profile aerospace client, boosting application performance by 40% through SSR and code-splitting.</li>
+            <li>Drove a 60% reduction in code duplication by designing and leading the adoption of a reusable UI component library across multiple teams.</li>
+            <li>Managed the end-to-end delivery of four major version releases for an enterprise SPA, independently handling modules from concept to deployment.</li>
+            <li>Elevated team productivity by mentoring junior developers and instituting a robust code review process to enforce best practices.</li>
+            <li>Improved code maintainability and scalability by refactoring legacy components with modern React patterns like custom hooks and the Context API.</li>
           </ul>
         </motion.div>
       </div>
