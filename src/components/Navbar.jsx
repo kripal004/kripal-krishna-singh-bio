@@ -7,7 +7,8 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#">
-          <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="h-10 w-10 rounded-full object-cover" />
+          Kripal Singh
+          {/* <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="h-10 w-10 rounded-full object-cover" /> */}
         </a>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
