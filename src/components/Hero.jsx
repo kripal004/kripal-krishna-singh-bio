@@ -23,7 +23,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="mb-1">
-            <a href="https://linkedin.com/in/kripal-singh-a9989512a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+          <a href="https://www.linkedin.com/in/kripal-krishna-singh-a9989512a" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
               LinkedIn
             </a>{" "}
             |{" "}
