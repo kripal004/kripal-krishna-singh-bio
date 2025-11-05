@@ -58,8 +58,6 @@ export const blogPosts = [
         title: "Building an Advanced, Excel-like Data Grid in React",
         slug: "building-advanced-excel-like-data-grid-in-react",
         date: "Nov 5, 2025",
-        image: "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-        image: "https://images.unsplash.com/photo-1634017835447-3536121a9a7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
         tags: "React, MUI, Redux, Data Grid",
         description: "A deep dive into creating a feature-rich data grid with MUI, Redux for state history (undo/redo), drag-and-drop, and advanced cell navigation."
@@ -414,8 +412,6 @@ function App() {
     ),
     'building-advanced-excel-like-data-grid-in-react': (
         <div className="prose lg:prose-xl max-w-none text-gray-700">
-            <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="A modern data grid interface" className="rounded-lg mb-8" />
-            <img src="https://images.unsplash.com/photo-1634017835447-3536121a9a7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="A modern data grid interface" className="rounded-lg mb-8" />
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="A modern data grid interface" className="rounded-lg mb-8" />
             <p className="lead">
                 Modern web applications often require complex data manipulation capabilities, similar to desktop spreadsheet software like Excel. In this post, we'll explore how to build a highly interactive and feature-rich data grid in React, leveraging a powerful stack of libraries to handle everything from data rendering to undo/redo functionality and encryption.
@@ -505,7 +501,7 @@ export default function Blog() {
             {
                 breakpoint: 640,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1, // This was correct, but the 1024 breakpoint was wrong
                 },
             },
         ],
