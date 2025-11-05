@@ -63,7 +63,7 @@ export default function SkillsEducation() {
         <div className="space-y-6">
           <div className="p-4 border-l-4 border-blue-500 bg-white rounded-r-lg shadow-sm">
             <p className="font-bold text-gray-900">Yeshwantrao Chavan College of Engineering</p>
-            <p className="text-gray-600 text-sm">B.E. (Computer Technology), May 2020</p>
+            <p className="text-gray-600 text-sm">B.E. (Computer Technology)</p>
             <p className="text-gray-500 text-xs mt-1">Nagpur, IN</p>
           </div>
           <div className="p-4 border-l-4 border-blue-500 bg-white rounded-r-lg shadow-sm">
