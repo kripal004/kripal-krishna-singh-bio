@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 export default function Contact() {
     const [copied, setCopied] = useState(false);
     const email = "kripal.hec@gmail.com";
+    const displayEmail = "kripal dot hec @ gmail dot com";
 
     const handleCopy = () => {
         navigator.clipboard.writeText(email);
@@ -24,7 +25,7 @@ export default function Contact() {
                 <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
                 <div className="mt-4">
                     <div className="flex items-center mb-2">
-                        <p className="mr-2">Email: <a href={`mailto:${email}`} className="text-blue-600 hover:underline">{email}</a></p>
+                        <p className="mr-2">Email: <a href={`mailto:${email}`} className="text-blue-600 hover:underline">{displayEmail}</a></p>
                         <button 
                             onClick={handleCopy} 
                             className="px-3 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded-md transition-colors"
@@ -34,6 +35,10 @@ export default function Contact() {
                         </button>
                     </div>
                     <p>LinkedIn: <a href="https://linkedin.com/in/kripal-singh-a9989512a" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a></p>
+                    <div className="mt-4 space-y-2">
+                        <p><strong className="font-semibold">Office:</strong> Infosys Limited, No. 44/97 A, Next to SBI Bank, Hosur Road, Electronic City-560100.</p>
+                        <p><strong className="font-semibold">Home:</strong> 38/1 Chinnappanahalli main road , chinnappanahalli marathahalli post Bangalore Fly Over Chennappa Layout, Chinnapanna Halli, post, Marathahalli, Bengaluru, Karnataka 560037</p>
+                    </div>
                 </div>
             </div>
         </motion.section>

@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="mb-4 text-gray-700">
           <div className="mb-1">
             <a href="mailto:kripal.hec@gmail.com" className="text-blue-600 hover:underline">
-              kripal.hec@gmail.com
+              kripal dot hec @ gmail dot com
             </a>{" "}
             |{" "}
             <a href="tel:+918149345927" className="hover:underline">
