@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#">
-          Kripal Singh
+        <a href="#" className="font-['font-mono'] text-xl text-gray-800">
+          KRIPAL KRISHNA SINGH
           {/* <img src="/kripal-krishna-singh/assets/Bio.jpg" alt="Profile" className="h-10 w-10 rounded-full object-cover" /> */}
         </a>
         {/* Desktop Menu */}
@@ -24,9 +24,9 @@ export default function Navbar() {
           <a href="#skills" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Skills
           </a>
-          <a href="#testimonials" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
+          {/* <a href="#testimonials" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Testimonials
-          </a>
+          </a> */}
           <a href="#contact" className="text-gray-600 hover:text-blue-500 font-semibold transition-colors duration-300">
             Contact
           </a>

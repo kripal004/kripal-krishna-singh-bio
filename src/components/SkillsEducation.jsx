@@ -15,15 +15,63 @@ export default function SkillsEducation() {
   };
 
   const skills = {
-    "Languages": ["JavaScript", "TypeScript"],
-    "Front-End": ["React.js", "Next.js", "Redux", "HTML5", "CSS3", "SCSS", "Tailwind CSS", "Material-UI"],
-    "State Management": ["Redux Toolkit", "Redux Saga", "Zustand", "React Context API"],
-    "UI/UX": ["Figma", "Adobe XD", "Canva"],
-    "Testing": ["Jest", "React Testing Library", "Cypress", "Vitest"],
-    "Version Control": ["Git", "GitHub", "Bitbucket", "Jira", "VersionOne", "ServiceNow"],
-    "Cloud & DevOps": ["AWS (S3, CloudFront)", "Docker", "Jenkins", "Vercel"],
-    "Tools": ["VS Code", "Chrome DevTools", "Postman", "Webpack", "Vite"],
-    "Databases (Basic)": ["MongoDB", "MySQL", "Firebase"]
+    "Languages": [
+      { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" }
+    ],
+    "Front-End": [
+      { name: "React.js", url: "https://react.dev/" },
+      { name: "Next.js", url: "https://nextjs.org/docs" },
+      { name: "Redux", url: "https://redux.js.org/" },
+      { name: "HTML5", url: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" },
+      { name: "CSS3", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      { name: "SCSS", url: "https://sass-lang.com/documentation" },
+      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
+      { name: "Material-UI", url: "https://mui.com/material-ui/getting-started/" }
+    ],
+    "State Management": [
+      { name: "Redux Toolkit", url: "https://redux-toolkit.js.org/introduction/getting-started" },
+      { name: "Redux Saga", url: "https://redux-saga.js.org/" },
+      { name: "Zustand", url: "https://github.com/pmndrs/zustand" },
+      { name: "React Context API", url: "https://react.dev/learn/passing-data-deeply-with-context" }
+    ],
+    "UI/UX": [
+      { name: "Figma", url: "https://www.figma.com/" },
+      { name: "Adobe XD", url: "https://helpx.adobe.com/support/xd.html" },
+      { name: "Canva", url: "https://www.canva.com/" }
+    ],
+    "Testing": [
+      { name: "Jest", url: "https://jestjs.io/docs/getting-started" },
+      { name: "React Testing Library", url: "https://testing-library.com/docs/react-testing-library/intro/" },
+      { name: "Cypress", url: "https://docs.cypress.io/" },
+      { name: "Vitest", url: "https://vitest.dev/guide/" }
+    ],
+    "Version Control": [
+      { name: "Git", url: "https://git-scm.com/doc" },
+      { name: "GitHub", url: "https://docs.github.com/" },
+      { name: "Bitbucket", url: "https://support.atlassian.com/bitbucket-cloud/" },
+      { name: "Jira", url: "https://www.atlassian.com/software/jira" },
+      { name: "VersionOne", url: "https://www.digital.ai/agile-planning/" },
+      { name: "ServiceNow", url: "https://www.servicenow.com/" }
+    ],
+    "Cloud & DevOps": [
+      { name: "AWS (S3, CloudFront)", url: "https://aws.amazon.com/documentation/" },
+      { name: "Docker", url: "https://docs.docker.com/" },
+      { name: "Jenkins", url: "https://www.jenkins.io/doc/" },
+      { name: "Vercel", url: "https://vercel.com/docs" }
+    ],
+    "Tools": [
+      { name: "VS Code", url: "https://code.visualstudio.com/docs" },
+      { name: "Chrome DevTools", url: "https://developer.chrome.com/docs/devtools/" },
+      { name: "Postman", url: "https://learning.postman.com/docs/getting-started/introduction/" },
+      { name: "Webpack", url: "https://webpack.js.org/concepts/" },
+      { name: "Vite", url: "https://vitejs.dev/guide/" }
+    ],
+    "Databases (Basic)": [
+      { name: "MongoDB", url: "https://www.mongodb.com/docs/" },
+      { name: "MySQL", url: "https://dev.mysql.com/doc/" },
+      { name: "Firebase", url: "https://firebase.google.com/docs" }
+    ]
   };
 
   return (
@@ -43,9 +91,11 @@ export default function SkillsEducation() {
               <h4 className="font-semibold text-gray-700 mb-2">{category}</h4>
               <div className="flex flex-wrap gap-2">
                 {skillList.map(skill => (
-                  <span key={skill} className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                    {skill}
-                  </span>
+                  <a href={skill.url} key={skill.name} target="_blank" rel="noopener noreferrer" className="block">
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-200 hover:shadow-sm transition-all duration-200">
+                      {skill.name}
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>
@@ -75,14 +125,6 @@ export default function SkillsEducation() {
             <p className="font-bold text-gray-900">Secondary (10th Grade)</p>
             <p className="text-gray-600 text-sm">CBSE</p>
             <p className="text-gray-500 text-xs mt-1">Ranchi, IN</p>
-          </div>
-        </div>
-        <div className="mt-8">
-          <h3 className="text-2xl font-bold mb-6 text-gray-800">Courses & Certifications</h3>
-          <div className="space-y-2">
-            <p className="text-gray-700 text-sm">React – The Complete Guide (incl. Hooks, React Router, Redux)</p>
-            <p className="text-gray-700 text-sm">Vue.js Fast Crash Course</p>
-            <p className="text-gray-700 text-sm">The Complete 2024 Web Development Bootcamp</p>
           </div>
         </div>
       </motion.div>
